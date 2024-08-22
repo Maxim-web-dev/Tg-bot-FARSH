@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	gap: 20px;
+}
+.img {
+	width: 16px;
+	height: 16px;
+}
+.quantity {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+}
+.quantityText {
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 16px;
+	margin: 0;
+}
+.price {
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 16px;
+	margin: 0;	
+}

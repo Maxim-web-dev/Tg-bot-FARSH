@@ -1,0 +1,39 @@
+.container {
+	width: 65px;
+	height: 65px;
+	position: fixed;
+	top: 100px;
+	right: 10px;
+	cursor: pointer;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.icon {
+	width: 34px;
+	height: 34px;
+	stroke: black;
+	padding: 12px 13px 14px;
+}
+.quantity {
+	position: absolute;
+	bottom: -6px;
+	right: -6px;
+	width: 24px;
+	height: 24px;
+	background-color: #d91615;
+	border-radius: 50%;
+	color: white;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 14px;
+}

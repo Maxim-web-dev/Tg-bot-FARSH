@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 
+import Menu from './pages/menu/menu'
+import Cart from './pages/cart/cart'
 import { useTelegram } from './hooks/useTelegram'
 import { useCartStore } from './store/cartStore'
 
@@ -12,9 +14,9 @@ function App() {
     tg.expand()
   }, [])
 
-  // if (isOpen) return <Cart />
+  if (isOpen) return <Cart />
 
-  // return <Menu />
+  return <Menu />
 }
 
 export default App

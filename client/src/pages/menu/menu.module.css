@@ -1,0 +1,91 @@
+.container {
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	gap: 20px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+.logo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 90px;
+	margin-bottom: 50px;
+}
+.logoImg {
+	width: 61px;
+	z-index: 1;
+}
+.logoText {
+	margin-top: 30px;
+	position: absolute;
+	font-size: 52px;
+	z-index: 1;
+}
+.item {
+	width: 47%;
+	display: flex;
+	flex-direction: column;
+}
+@media screen and (max-width: 375px) {
+	.item {
+		width: 45%;
+	}	 
+} 
+.image {
+	max-width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.text {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.price {
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 18px;
+	margin-top: auto;
+}
+.button {
+	width: 100%;
+	height: 45px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: #d91615;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header {
+	position: fixed;
+	margin-bottom: 500px;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+	background-color: #000;
+}
+.headerLogo {
+	height: 30px;
+	margin-left: 20px;
+}
