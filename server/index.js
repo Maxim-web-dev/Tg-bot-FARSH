@@ -1,12 +1,10 @@
 import cors from "cors";
 import express from "express";
 import TelegramBot from "node-telegram-bot-api";
-import 'dotenv/config'
-// import pkg from 'pg';
-
+import pkg from 'pg';
 import { parseData } from "./utils/parseData.js";
 
-// const { Client } = pkg;
+const { Client } = pkg;
 
 const bot = new TelegramBot(process.env.TOKEN, { polling: true });
 
@@ -15,14 +13,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// const client = new Client({
-//   user: 'postgres',
-//   host: 'localhost',
-//   database: 'tgbotfarsh',
-//   password: 'root',
-//   port: 5432, 
-// });
-// client.connect();
+const client = new Client({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'tgbotfarsh',
+  password: 'root',
+  port: 5432, 
+});
+client.connect();
 
 bot.on("message", async msg => {
   const chatId = msg.chat.id;
