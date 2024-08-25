@@ -6,24 +6,22 @@ export const parseData = (data) => {
     .map((el) => el.name + " × " + el.quantity)
     .join("\n");
 
-  const string = `
+  const stringOfData = `
    
-   Имя: ${parsedData?.name}
-   Почта: ${parsedData?.email}
-   Телефон: ${parsedData?.phone}
-   Город: ${parsedData?.city}
-   Улица: ${parsedData?.street}
-   Дом: ${parsedData?.house}
-   Корпус: ${parsedData?.building}
-   Квартира: ${parsedData?.apartment}
-   Комментарий: ${parsedData?.comment}
+Имя: ${parsedData?.name}
+Почта: ${parsedData?.email}
+Телефон: ${parsedData?.phone}
+Город: ${parsedData?.city}
+Улица: ${parsedData?.street}
+Дом: ${parsedData?.house}
+Корпус: ${parsedData?.building}
+Квартира: ${parsedData?.apartment}
+Комментарий: ${parsedData?.comment}
    
+Корзина: 
+${cart}
    
-   Корзина: 
-   ${cart}
-   
-   Общая стоимость: ${parsedData.totalPrice}
-   telegramId: ${parsedData.telegramId}
-   `;
-  return string;
+Общая стоимость: ${parsedData.totalPrice}
+  `;
+  return { stringOfData, parsedData, cart }
 };
