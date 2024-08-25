@@ -15,6 +15,6 @@ create TABLE orders (
 CREATE TABLE order_products (
     id SERIAL PRIMARY KEY,  
     order_id INT REFERENCES orders(id) ON DELETE CASCADE,  
-    menu_name VARCHAR(255) NOT NULL,
-    quantity INT NOT NULL
+    menu_name VARCHAR(255) ,
+    quantity INT 
 );
