@@ -21,7 +21,7 @@ export const parseData = (data) => {
 Корзина: 
 ${cart}
    
-Общая стоимость: ${parsedData.totalPrice}
+Общая стоимость: ${parsedData.totalPrice.toLocaleString()}₽
   `;
   return { stringOfData, parsedData, cart }
 };
