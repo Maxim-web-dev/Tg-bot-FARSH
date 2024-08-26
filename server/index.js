@@ -53,7 +53,7 @@ bot.on("message", async (msg) => {
             apartment: parsedData.apartment,
           },
         },
-        products: cart.map((product) => ({
+        products: parsedData.cart.map((product) => ({
           menu_name: product.name,
           quantity: product.quantity,
         })),
