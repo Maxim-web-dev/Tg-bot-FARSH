@@ -5,12 +5,12 @@ import "dotenv/config";
 import { parseData } from "./utils/parseData.js";
 import { MongoClient, ServerApiVersion } from "mongodb";
 import mongoose from "mongoose";
-import Order from './schemas/order.js'
+import Order from "./schemas/order.js";
 
 const uri =
   "mongodb+srv://admin:root@tgfarsh.65swl4s.mongodb.net/?retryWrites=true&w=majority&appName=tgfarsh";
 
-mongoose.connect(uri)
+mongoose.connect(uri);
 
 const bot = new TelegramBot(process.env.TOKEN, { polling: true });
 
@@ -28,10 +28,24 @@ bot.on("message", async (msg) => {
       reply_markup: {
         keyboard: [
           [{ text: "Сделать заказ", web_app: { url: process.env.WEBAPPURL } }],
+          [{ text: "Техподдержка" }],
         ],
+        resize_keyboard: true,
       },
     });
   }
+
+  if (text === "Техподдержка") {
+    await bot.sendMessage(
+      chatId,
+      `😔Проблемы с заказом ?
+
+❌Заказали что-то лишнее или хотите отменить заказ?
+
+❤️С радостью вам поможем - обратитесь в поддержку по номеру +7 (777) 777-77-77`
+    );
+  }
+
   if (msg?.web_app_data?.data) {
     const data = msg?.web_app_data?.data;
     const { parsedData, stringOfData, cart } = parseData(data);
